@@ -1,6 +1,16 @@
 <h1>Λίστα παραπόνων</h1>
-<ul>
+<table border="1">
+  <tr>
+    <th> Καταναλωτής </th> 
+    <th> Εταιρία </th> 
+    <th> Αρμόδιος </th>
+  </tr>
+  
   {% for parapono in lista_paraponon %}
-    <li>{{ parapono }}</li>
+  <tr>
+    <td> {{ parapono.katanalotis }} </td>
+    <td> {{ parapono.etairia }} </td>
+    <td> {{ parapono.armodios }} </td>
+  </tr>
   {% endfor %}
-</ul>
+</table>

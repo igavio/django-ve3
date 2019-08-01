@@ -8,18 +8,18 @@
 
 <table border="1">
   <tr>
+    <th> Κωδ. </th>
     <th> Καταναλωτής </th>
     <th> Εταιρία </th>
     <th> Υποβολή </th>
-    <th> Περιγραφή </th>
   </tr>
 
   {% for parapono in lista_paraponon %}
   <tr>
+    <td> <a href="{% url 'ena_parSelida' parapono.id %}"> {{parapono.id }} </a> </td>
     <td> {{ parapono.katanalotis }} </td>
     <td> {{ parapono.etairia }} </td>
     <td> {{ parapono.ypovoli }} </td>
-    <td> {{ parapono.perigrafi }} </td>
   </tr>
   {% endfor %}
 </table>

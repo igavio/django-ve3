@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block myHeader%}
+Αναλυτικά στοιχεία παραπόνου
+{% endblock myHeader %}
+
+{% block myArticle %}
+
+<table class="tg">
+    <tr>
+        <td class="c1">Καταναλωτής </td>
+        <td>{{ ena_parapono.katanalotis }} </td>
+    </tr>
+    <tr>
+        <td class="c1">Εταιρία </td>
+        <td>{{ ena_parapono.etairia }} </td>
+    </tr>
+    <tr>
+        <td class="c1">Υποβολή </td>
+        <td>{{ ena_parapono.ypovoli }} </td>
+    </tr>
+    <tr>
+        <td class="c1">Πρόστιμο </td>
+        <td>{{ ena_parapono.prostimo }} </td>
+    </tr>
+    <tr>
+        <td class="c1">Αρμόδιος </td>
+        <td>{{ ena_parapono.armodios }} </td>
+    </tr>
+    <tr>
+        <td class="c1">Επιτόπιος έλεγχος</td>
+        <td>{{ ena_parapono.epitopios }}</td>
+    </tr>
+    <tr>
+        <td class="c1">Περιγραφή </td>
+        <td>{{ ena_parapono.perigrafi }} </td>
+    </tr>
+    <tr>
+        <td class="c1">Καταχωρήθηκε από </td>
+        <td>{{ ena_parapono.xristis }} </td>
+    </tr>
+    <tr>
+        <td class="c1">Καταχωρήθηκε την </td>
+        <td>{{ ena_parapono.eisagogi }} </td>
+    </tr>
+
+</table>
+
+{% endblock myArticle %}

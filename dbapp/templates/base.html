@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+
+<head>
+    <title>Παράπονα καταναλωτών</title>
+</head>
+
+<body>
+    <header>
+        <h2>
+            {% block myHeader %}
+            Παράπονα καταναλωτών
+            {% endblock myHeader %}
+        </h2>
+    </header>
+
+    <nav>
+        <a href="{% url 'arxikiSelida' %}">Αρχική</a>
+        <a href="{% url 'periSelida' %}">Περί</a>
+    </nav>
+
+    <article>
+        {% block myArticle %}
+        {% endblock myArticle %}
+    </article>
+</body>
+
+</html>

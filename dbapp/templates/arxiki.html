@@ -1,16 +1,27 @@
-<h1>Λίστα παραπόνων</h1>
+{% extends 'base.html' %}
+
+{% block myHeader%}
+Λίστα παραπόνων
+{% endblock myHeader %}
+
+{% block myArticle %}
+
 <table border="1">
   <tr>
-    <th> Καταναλωτής </th> 
-    <th> Εταιρία </th> 
-    <th> Αρμόδιος </th>
+    <th> Καταναλωτής </th>
+    <th> Εταιρία </th>
+    <th> Υποβολή </th>
+    <th> Περιγραφή </th>
   </tr>
-  
+
   {% for parapono in lista_paraponon %}
   <tr>
     <td> {{ parapono.katanalotis }} </td>
     <td> {{ parapono.etairia }} </td>
-    <td> {{ parapono.armodios }} </td>
+    <td> {{ parapono.ypovoli }} </td>
+    <td> {{ parapono.perigrafi }} </td>
   </tr>
   {% endfor %}
 </table>
+
+{% endblock myArticle %}

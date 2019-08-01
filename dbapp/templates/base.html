@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 {% load static %}
-
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Παράπονα καταναλωτών</title>
+    <title>Παράπονα καταναλωτών</title>  
+    <link href="{% static 'base.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     </header>
 
     <nav>
-        <a href="{% url 'arxikiSelida' %}">Αρχική</a>
+        <a href="{% url 'arxikiSelida' %}">Αρχική</a> 
         <a href="{% url 'periSelida' %}">Περί</a>
     </nav>
 

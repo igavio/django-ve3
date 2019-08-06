@@ -3,7 +3,11 @@
 <html>
 
 <head>
-    <title>Παράπονα καταναλωτών</title>  
+    <title>
+        {% block myTitle %} 
+        Παράπονα 
+        {% endblock myTitle %}
+    </title>  
     <link href="{% static 'base.css' %}" rel="stylesheet">
 </head>
 

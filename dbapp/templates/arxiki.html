@@ -16,10 +16,13 @@
 
   {% for parapono in lista_paraponon %}
   <tr>
-    <td> <a href="{% url 'ena_parSelida' parapono.id %}"> {{parapono.id }} </a> </td>
+    <td> {{parapono.id }}           </td>
     <td> {{ parapono.katanalotis }} </td>
-    <td> {{ parapono.etairia }} </td>
-    <td> {{ parapono.ypovoli }} </td>
+    <td> {{ parapono.etairia }}     </td>
+    <td> {{ parapono.ypovoli }}     </td>
+    <td> <a href="{% url 'ena_parSelida' parapono.id %}">Προβολή</a> </td> 
+    <td> <a href="{% url 'tro_parSelida' parapono.id %}">Αλλαγή </a> </td> 
+    <td> <a href="{% url 'svy_parSelida' parapono.id %}">Σβήσιμο </a> </td>
   </tr>
   {% endfor %}
 </table>

@@ -1,5 +1,6 @@
 from django.db import models
 import datetime
+from django.urls import reverse
 
 class Parapono(models.Model):
     katanalotis = models.CharField(max_length=40, verbose_name='Καταναλωτής')
@@ -21,4 +22,6 @@ class Parapono(models.Model):
 
     def __str__(self):
         return self.katanalotis[:20] + ' - ' + self.etairia[:20]
-    
+
+    def get_absolute_url(self):
+        return reverse('ena_parSelida', args = [str(self.id)])

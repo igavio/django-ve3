@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block myHeader %}
+Σβήσιμο παραπόνου
+{% endblock myHeader %}
+
+{% block myArticle %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>Σίγουρος για το σβήσιμο του παραπόνου {{ parapono }} ; </p> 
+    <input type="submit" value="Προχώρα!" />
+</form>
+{% endblock myArticle %}

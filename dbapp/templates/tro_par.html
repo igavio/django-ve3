@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block myHeader }
+Ενημέρωση παραπόνου
+{% endblock myHeader %}
+
+{% block myArticle %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }} 
+    <input type="submit" value="Ενημέρωση" />
+</form>
+{% endblock myArticle %}

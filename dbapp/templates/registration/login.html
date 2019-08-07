@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block myTitle %} 
+Παράπονα - Σύνδεση
+{% endblock myTitle %} 
+
+{% block myHeader%}
+Σύνδεση χρήστη
+{% endblock myHeader %}
+
+{% block myArticle %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Σύνδεση χρήστη" />
+</form>
+{% endblock myArticle %}

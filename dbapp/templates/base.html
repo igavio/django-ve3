@@ -26,6 +26,16 @@
         <a href="{% url 'periSelida' %}">Περί</a>
     </nav>
 
+    {% if user.is_authenticated %}
+        <p>Είστε συνδεδεμένος ως {{ user.username }}.
+           <a href="{% url 'logout' %}">Αποσύνδεση</a>
+           <a href="{% url 'password_change' %}">Αλλαγή συνθηματικού</a>
+        </p>
+    {% else %}
+        <p>Δεν έχετε συνδεθεί.
+          <a href="{% url 'login' %}">Σύνδεση χρήστη</a></p>
+    {% endif %}
+   
     <article>
         {% block myArticle %}
         {% endblock myArticle %}

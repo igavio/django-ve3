@@ -9,6 +9,7 @@ class ArxikiView(ListView):
 
 class PeriView(TemplateView):
     template_name = 'peri.html'
+    #login_required = True
 
 class EnaParapono(DetailView):
     model = Parapono
@@ -28,5 +29,5 @@ class TroParapono(UpdateView):
 class SvyParapono(DeleteView):
     model = Parapono
     template_name = 'svy_par.html'
-    #context_object_name = 'svy_parapono'
+    context_object_name = 'svy_parapono'
     
